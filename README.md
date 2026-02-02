@@ -1,9 +1,9 @@
 # PEMFC–Battery HESS FCEV Emulator  
-This repository was created in the fulfillement of the course "Projet et Synthèse EPRM" at EiCNAM. (Repository Structure is detailed at the end of the Readme file). 
+This repository was created in the fulfillement of the course "Projet et Synthèse EPRM" at EiCNAM. **(Repository Structure is detailed at the end of the Readme file).** 
 
 
 ## Overview
-
+**(Repository Structure is detailed at the end of the Readme file).**
 This project presents the modeling, control, simulation, and experimental validation of a **Proton Exchange Membrane Fuel Cell (PEMFC) emulator** integrated into a **Hybrid Energy Storage System (HESS)** for **Fuel Cell Electric Vehicles (FCEV)**.
 
 The objective is to reproduce, at reduced scale, the **electrical behavior of a real PEM fuel cell** , while ensuring realistic interaction with a **DC bus whose voltage is imposed by a battery**. 
@@ -16,7 +16,7 @@ The complete system is developed under **MATLAB/Simulink (Simscape)** and design
 ---
 
 ## System Architecture
-
+**(Repository Structure is detailed at the end of the Readme file).**
 The proposed architecture relies on **two DC/DC converters with decoupled control objectives**:
 
 ### 1. Buck Converter – Fuel Cell Voltage Emulation
@@ -28,6 +28,7 @@ The proposed architecture relies on **two DC/DC converters with decoupled contro
 - Designed using a **second-order averaged model** to accurately capture disturbance dynamics
 
 ### 2. Boost Converter – Fuel Cell Current Control
+**(Repository Structure is detailed at the end of the Readme file).**
 - Operates in **CCM**
 - Current Controlled 
 - Regulates the **current drawn from the fuel cell emulator**
@@ -38,7 +39,7 @@ The **battery is directly connected to the DC bus**, imposing its voltage and ab
 ---
 
 ## Simulation Environment
-
+**(Repository Structure is detailed at the end of the Readme file).**
 - **MATLAB / Simulink**
 - **Simscape Electrical**
 - Average-value converter models
@@ -50,15 +51,15 @@ A Boolean selector allows switching between:
 ---
 
 ## Performance Specifications
-
+**(Repository Structure is detailed at the end of the Readme file).**
 - **Buck (Voltage Control)**
   - No overshoot
-  - \( T_{5\%} \leq 1 \, \text{ms} \)
+  -T5%<=1mS
   - Phase margin >= 59°
 
 - **Boost (Current Control)**
   - No overshoot
-  - \( T_{5\%} \leq 1 \, \text{ms} \)
+  - T5%<=1mS
 
 - Controlled current ripple and voltage ripple within predefined limits
 
