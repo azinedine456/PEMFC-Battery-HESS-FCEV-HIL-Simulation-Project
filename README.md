@@ -1,11 +1,12 @@
 # PEMFC–Battery HESS FCEV Emulator  
-**Fuel Cell Electric Vehicle Emulation using Buck–Boost DC/DC Converters**
+This repository was created in the fulfillement of the course "Projet et Synthèse EPRM" at EiCNAM.  
+
 
 ## Overview
 
 This project presents the modeling, control, simulation, and experimental validation of a **Proton Exchange Membrane Fuel Cell (PEMFC) emulator** integrated into a **Hybrid Energy Storage System (HESS)** for **Fuel Cell Electric Vehicles (FCEV)**.
 
-The objective is to reproduce, at reduced scale, the **electrical behavior of a real PEM fuel cell** without using an actual hydrogen system, while ensuring realistic interaction with a **DC bus whose voltage is imposed by a battery**. The emulator is intended for **research, teaching, and Hardware-in-the-Loop (HIL)** applications.
+The objective is to reproduce, at reduced scale, the **electrical behavior of a real PEM fuel cell** , while ensuring realistic interaction with a **DC bus whose voltage is imposed by a battery**. 
 
 The complete system is developed under **MATLAB/Simulink (Simscape)** and designed with a strong focus on:
 - Control robustness  
@@ -28,26 +29,11 @@ The proposed architecture relies on **two DC/DC converters with decoupled contro
 
 ### 2. Boost Converter – Fuel Cell Current Control
 - Operates in **CCM**
-- Controlled in **current mode**
+- Current Controlled 
 - Regulates the **current drawn from the fuel cell emulator**
 - Allows direct control of the **fuel cell operating point** and delivered power
 
 The **battery is directly connected to the DC bus**, imposing its voltage and absorbing fast power transients, consistent with **semi-active FCEV architectures**.
-
----
-
-## Key Features
-
-- PEMFC electrical modeling under nominal conditions  
-- Buck–Boost emulator structure with decoupled control loops  
-- Robust PI controller design using:
-  - Pole–zero cancellation
-  - Frequency-domain margins (gain & phase)
-- Validation with:
-  - Synthetic power profiles
-  - WLTC driving cycle (normalized)
-- Reduced-scale laboratory implementation (≈ 6 A nominal)
-- Designed for future HIL and real-time extensions
 
 ---
 
@@ -56,7 +42,6 @@ The **battery is directly connected to the DC bus**, imposing its voltage and ab
 - **MATLAB / Simulink**
 - **Simscape Electrical**
 - Average-value converter models
-- Discrete-time implementation compatible with real-time execution
 
 A Boolean selector allows switching between:
 - Fictitious step-based profiles
@@ -69,7 +54,7 @@ A Boolean selector allows switching between:
 - **Buck (Voltage Control)**
   - No overshoot
   - \( T_{5\%} \leq 1 \, \text{ms} \)
-  - Phase margin > 45°
+  - Phase margin >= 59°
 
 - **Boost (Current Control)**
   - No overshoot
@@ -89,7 +74,19 @@ A Boolean selector allows switching between:
   - Robust behavior with properly selected damping resistance
   - No unexpected instability during operation
 
----
 
-## Repository Structure
+<img width="894" height="335" alt="image" src="https://github.com/user-attachments/assets/0be9f0f7-532e-4c59-ae29-6ad8cbb2e1af" />
+
+**Yellow Waveform : PEMFC Emulator Output Voltage**
+
+**Blue Waveform : PEMFC Model Output Voltage (Reference for the Buck converter)**
+
+**Red Waveform : Current Referece/setpoint**
+
+**Green Waveform : Measured Current**
+
+
+
+<img width="1117" height="322" alt="image" src="https://github.com/user-attachments/assets/5a2d2986-0a37-4640-98b4-c32b67d4ff8f" />
+
 
