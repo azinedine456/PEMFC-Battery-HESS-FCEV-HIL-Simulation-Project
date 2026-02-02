@@ -121,7 +121,7 @@ A Boolean selector allows switching between:
 ### Global Simulation (Offline – MATLAB/Simulink)
 
 - **FullSystemPAC_init.m**  
-  Main initialization and execution script for the **offline global simulation**.  
+  Main initialization and execution script for the **offline global simulation**.  (Set RealData=1 to use WLTC current profiles)
   This script sets parameters, launches simulations, and saves the associated results.  
   It relies on the following files:
 
@@ -156,7 +156,7 @@ A Boolean selector allows switching between:
 ### Real-Time / Experimental Implementation
 
 - **MANIP_FULLSYSTEM.m**  
-  Main script used to run the **global real-time simulation / experimental setup**.  
+  Main script used to run the **global real-time simulation / experimental setup**.  (Set RealData=1 to use WLTC current profiles)
   It is associated with the following Simulink real-time models:
 
   - **MANIP_FINAL_RealData.slx**  
