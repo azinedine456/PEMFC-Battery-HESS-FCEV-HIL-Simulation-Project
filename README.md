@@ -89,6 +89,7 @@ A Boolean selector allows switching between:
 **Red Waveform : Current Referece/setpoint**
 
 **Green Waveform : Measured Current**
+**PAC : Pile à combustible => Fuel cell in French**
 
 
 
